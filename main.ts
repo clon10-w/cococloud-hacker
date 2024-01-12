@@ -1,4 +1,4 @@
-//% color=190 weight=100 icon="\uf5fc" block="CocoCloud Hacker"
+//% color=026 weight=100 icon="\ue076" block="CocoCloud Hacker"
 namespace CocoCloudHacker {
 
 	let cocoSent = false
