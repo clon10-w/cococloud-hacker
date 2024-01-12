@@ -16,8 +16,8 @@ namespace CocoCloudHacker {
         // Make sure the WiFi is connected.
         if (esp8266.isWifiConnected() == false) return
 
-        // Connect to Telegram. Return if failed.
-        if (esp8266.sendCommand("AT+CIPSTART=\"TCP\",\"" + "api.cocorobo.hk" + "\",80", "OK", 60) == false) return
+        // Connect to Telegram. Return if failed is deleted
+        esp8266.sendCommand("AT+CIPSTART=\"TCP\",\"" + "api.cocorobo.hk" + "\",80", "OK", 60)
 
         // Construct the data to send.
         let data = "POST /iot/data/eventAPIKeyJson/" + apiKeysec 
