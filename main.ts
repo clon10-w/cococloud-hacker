@@ -25,9 +25,9 @@ namespace CocoCloudHacker {
         data += "Host: " + "api.cocorobo.hk" + "\r\n"
         data += "Content-Type: " + "application/json" + "\r\n"
 	data += "\r\n"
-	data += "{"
+	data += "\{"
         data += "\""+ pps + "\":" + vle + "\r\n"
-        data += "}" + "\r\n"
+        data += "\}" + "\r\n"
 
         // Send the data.
         esp8266.sendCommand("AT+CIPSEND=" + (data.length + 2))
