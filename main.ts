@@ -23,10 +23,11 @@ namespace CocoCloudHacker {
         let data = "POST /iot/data/eventAPIKeyJson/" + apiKeysec 
         data += " HTTP/1.1\r\n"
         data += "Host: " + "api.cocorobo.hk" + "\r\n"
-        data += "{"
+        data += "Content-Type: " + "application/json" + "\r\n"
+	data += "\r\n"
+	data += "{"
         data += "\"+ pps + \":" + vle + "\r\n"
         data += "}" + "\r\n"
-        data += "Content-Type: " + "application/json" + "\r\n"
 
         // Send the data.
         esp8266.sendCommand("AT+CIPSEND=" + (data.length + 2))
