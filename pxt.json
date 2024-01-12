@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "pxt-esp8266": "github:cytrontechnologies/pxt-esp8266#v2.0.1"
     },
     "files": [
         "main.blocks",
