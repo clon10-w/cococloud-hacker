@@ -23,9 +23,9 @@ namespace CocoCloudHacker {
 	let data = "POST /iot/data/eventAPIKeyJson/" + apiKeysec + "/ HTTP/1.1\r\n"
 	data += "Host: " + "api.cocorobo.hk" + "\r\n"
 	data += "Content-Type: " + "application/json;charset=utf-8" + "\r\n"
-	data += "Content-Type: " + "text/plain" + "\r\n"
-	data += "Content-Length:" + (pps.length + vle.length + 7) + "\r\n" 
-	data += "cache-control: " + "no-cache" + "\r\n"
+	//data += "Content-Type: " + "text/plain" + "\r\n"
+	data += "Content-Length: " + (pps.length + vle.length + 7) + "\r\n" 
+	data += "\r\n"
 	data += "\{\"" + pps + "\":\"" + vle+ "\"\}" 
 
         // Send the data.
