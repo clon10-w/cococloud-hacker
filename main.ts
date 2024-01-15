@@ -57,9 +57,9 @@ let cocoSent = false
 
         // Reset the upload successful flag.
         cocoSent = false
-	var vle1 = vlen1.toString()
-	var vle2 = vlen2.toString()
-	var vle3 = vlen3.toString()
+	let vle1 = vlen1.toString()
+	let vle2 = vlen2.toString()
+	let vle3 = vlen3.toString()
 
         // Make sure the WiFi is connected.
         if (esp8266.isWifiConnected() == false) return
