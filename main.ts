@@ -72,7 +72,7 @@ let cocoSent = false
 	data += "Host: " + "api.cocorobo.hk" + "\r\n"
 	data += "Content-Type: " + "application/json" + "\r\n"
 	//data += "Content-Type: " + "text/plain" + "\r\n"
-	data += "Content-Length: " + (pps.length + vle.length + 19) + "\r\n" 
+	data += "Content-Length: " + (pps1.length + vle1.length + pps2.length + vle2.length + pps3.length + vle3.length + 19) + "\r\n" 
 	data += "\r\n"
 	data += "\{\"" + pps1 + "\":\"" + vle1+ "\",\"" + pps2 + "\":\"" + vle2+ "\",\"" + pps3 + "\":\"" + vle3+ "\"}" 
 
