@@ -8,10 +8,11 @@ namespace CocoCloudHacker {
     //% blockGap=8
     //% blockId=send_cococloud
     //% block="send message to CocoCloud:|API Key %apiKeysec|Properties %pps|Value %vle"
-    export function sendToCococloud(apiKeysec: string, pps: string, vle: string) {
+    export function sendToCococloud(apiKeysec: string, pps: string, vlen: number) {
 
         // Reset the upload successful flag.
         cocoSent = false
+	var vle = vlen.toString()
 
         // Make sure the WiFi is connected.
         if (esp8266.isWifiConnected() == false) return
