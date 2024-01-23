@@ -94,4 +94,11 @@ let cocoSent = false
         cocoSent = true
         return
     }
+
+    //% subcategory="Future Fx"
+    //% block="uploaded to CocoCloud"
+    export function uc(): boolean
+    { 
+        return cocoSent;
+    }
 }
