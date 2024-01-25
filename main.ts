@@ -12,13 +12,13 @@ let cocoSent = false
 
         // Reset the upload successful flag.
         cocoSent = false
-	var vle = vlen.toString()
+	let vle = vlen.toString()
 
         // Make sure the WiFi is connected.
         if (esp8266.isWifiConnected() == false) return
 
         // Connect to Telegram. Return if failed is deleted
-        esp8266.sendCommand("AT+CIPSTART=\"TCP\",\"" + "api.cocorobo.hk" + "\",80", "OK", 60)
+        if (esp8266.sendCommand("AT+CIPSTART=\"TCP\",\"" + "api.cocorobo.hk" + "\",80", "OK", 60) == false) return
 
         // Construct the data to send.
 	let data = "POST /iot/data/eventAPIKeyJson/" + apiKeysec + "/ HTTP/1.1\r\n"
@@ -65,7 +65,7 @@ let cocoSent = false
         if (esp8266.isWifiConnected() == false) return
 
         // Connect to Telegram. Return if failed is deleted
-        esp8266.sendCommand("AT+CIPSTART=\"TCP\",\"" + "api.cocorobo.hk" + "\",80", "OK", 60)
+        if (esp8266.sendCommand("AT+CIPSTART=\"TCP\",\"" + "api.cocorobo.hk" + "\",80", "OK", 60) == false) return
 
         // Construct the data to send.
 	let data = "POST /iot/data/eventAPIKeyJson/" + apiKeyth + "/ HTTP/1.1\r\n"
