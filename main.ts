@@ -33,12 +33,12 @@ let cocoSent = false
         esp8266.sendCommand("AT+CIPSEND=" + (data.length + 2))
         esp8266.sendCommand(data)
 
-        /* Return if "SEND OK" is not received.
+        // Return if "SEND OK" is not received.
         if (esp8266.getResponse("EVENT UPDATE", 1000) == "") {
             // Close the connection and return.
             esp8266.sendCommand("AT+CIPCLOSE", "OK", 1000)
             return
-        }*/
+        }
 
         // Close the connection.
         esp8266.sendCommand("AT+CIPCLOSE", "OK", 1000)
